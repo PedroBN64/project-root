@@ -1,0 +1,53 @@
+┣ 📂backend
+┃ ┣ 📂config
+┃ ┃ ┣ 📜database.js
+┃ ┃ ┗ 📜passport.js
+┃ ┣ 📂controllers
+┃ ┃ ┗ 📜alunoController.js
+┃ ┣ 📂migrations
+┃ ┣ 📂models
+┃ ┃ ┣ 📜aluno.js
+┃ ┃ ┣ 📜index.js
+┃ ┃ ┗ 📜Usuario.js
+┃ ┣ 📂routes
+┃ ┃ ┣ 📜alunoRoutes.js
+┃ ┃ ┗ 📜authRoutes.js
+┃ ┣ 📂seeders
+┃ ┣ 📜package.json
+┃ ┗ 📜server.js
+┣ 📂database
+┣ 📂frontend
+┃ ┣ 📂public
+┃ ┃ ┣ 📜favicon.ico
+┃ ┃ ┣ 📜index.html
+┃ ┃ ┣ 📜logo192.png
+┃ ┃ ┣ 📜logo512.png
+┃ ┃ ┣ 📜manifest.json
+┃ ┃ ┗ 📜robots.txt
+┃ ┣ 📂src
+┃ ┃ ┣ 📂components
+┃ ┃ ┃ ┣ 📜Navbar.js
+┃ ┃ ┃ ┗ 📜Sidebar.js
+┃ ┃ ┣ 📂context
+┃ ┃ ┃ ┗ 📜AuthContext.js
+┃ ┃ ┣ 📂css
+┃ ┃ ┃ ┗ 📜styles.css
+┃ ┃ ┣ 📂pages
+┃ ┃ ┃ ┣ 📜Dashboard.js
+┃ ┃ ┃ ┣ 📜Login.js
+┃ ┃ ┃ ┗ 📜Register.js
+┃ ┃ ┣ 📂services
+┃ ┃ ┣ 📜App.css
+┃ ┃ ┣ 📜App.js
+┃ ┃ ┣ 📜App.test.js
+┃ ┃ ┣ 📜index.css
+┃ ┃ ┣ 📜index.js
+┃ ┃ ┣ 📜Login.js
+┃ ┃ ┣ 📜logo.svg
+┃ ┃ ┣ 📜reportWebVitals.js
+┃ ┃ ┗ 📜setupTests.js
+┃ ┣ 📜package.json
+┃ ┣ 📜README.md
+┃ ┗ 📜tailwind.config.js
+┣ 📜.gitignore
+┗ 📜README.MD
