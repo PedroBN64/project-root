@@ -13,16 +13,15 @@ import {
   FaChevronDown,
   FaChevronUp,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Sidebar = ({ userName }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [expandedMenus, setExpandedMenus] = useState({});
-  const [activeMenu, setActiveMenu] = useState(null);
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   const toggleMenu = (menu) => {
-    setActiveMenu(activeMenu === menu ? null : menu);
     setExpandedMenus((prevState) => ({
       ...prevState,
       [menu]: !prevState[menu],
@@ -31,7 +30,9 @@ const Sidebar = ({ userName }) => {
 
   return (
     <div
-      className={`${isSidebarOpen ? "w-64" : "w-20"} bg-gradient-to-r from-indigo-600 to-purple-700 h-screen text-white flex flex-col transition-all duration-300 relative`}
+      className={`${
+        isSidebarOpen ? "w-64" : "w-20"
+      } bg-gradient-to-r from-indigo-600 to-purple-700 h-screen text-white flex flex-col transition-all duration-300 relative`}
     >
       {/* Sidebar Header */}
       <div className="flex items-center justify-between p-4">
@@ -78,26 +79,25 @@ const Sidebar = ({ userName }) => {
                   <FaChevronDown className="text-sm" />
                 ))}
             </button>
-            {/* Submenu */}
             {expandedMenus.gestaoEscolar && (
-              <ul
-                className={`${
-                  isSidebarOpen
-                    ? "pl-4 mt-2 space-y-1 bg-indigo-700 shadow-lg rounded-md"
-                    : "absolute left-full top-0 mt-2 space-y-1 w-48 bg-indigo-700 shadow-lg rounded-md"
-                }`}
-              >
-                <li className="py-1 hover:bg-indigo-600 rounded-md">
-                  <FaUser className="inline mr-2" />
-                  Ficha do Aluno
+              <ul className="pl-4 mt-2 space-y-1 bg-indigo-700 shadow-lg rounded-md">
+                <li>
+                  <Link to="/dashboard/ficha-do-aluno" className="flex items-center py-1 hover:bg-indigo-600 rounded-md">
+                    <FaUser className="inline mr-2" />
+                    Ficha do Aluno
+                  </Link>
                 </li>
-                <li className="py-1 hover:bg-indigo-600 rounded-md">
-                  <FaUser className="inline mr-2" />
-                  Cadastro de Alunos
+                <li>
+                  <Link to="/dashboard/cadastro-de-alunos" className="flex items-center py-1 hover:bg-indigo-600 rounded-md">
+                    <FaUser className="inline mr-2" />
+                    Cadastro de Alunos
+                  </Link>
                 </li>
-                <li className="py-1 hover:bg-indigo-600 rounded-md">
-                  <FaBus className="inline mr-2" />
-                  Transporte Escolar
+                <li>
+                  <Link to="/dashboard/transporte-escolar" className="flex items-center py-1 hover:bg-indigo-600 rounded-md">
+                    <FaBus className="inline mr-2" />
+                    Transporte Escolar
+                  </Link>
                 </li>
               </ul>
             )}
@@ -118,22 +118,19 @@ const Sidebar = ({ userName }) => {
                   <FaChevronDown className="text-sm" />
                 ))}
             </button>
-            {/* Submenu */}
             {expandedMenus.recursosHumanos && (
-              <ul
-                className={`${
-                  isSidebarOpen
-                    ? "pl-4 mt-2 space-y-1 bg-indigo-700 shadow-lg rounded-md"
-                    : "absolute left-full top-0 mt-2 space-y-1 w-48 bg-indigo-700 shadow-lg rounded-md"
-                }`}
-              >
-                <li className="py-1 hover:bg-indigo-600 rounded-md">
-                  <FaUser className="inline mr-2" />
-                  Cadastro de Profissionais
+              <ul className="pl-4 mt-2 space-y-1 bg-indigo-700 shadow-lg rounded-md">
+                <li>
+                  <Link to="/dashboard/cadastro-de-profissionais" className="flex items-center py-1 hover:bg-indigo-600 rounded-md">
+                    <FaUser className="inline mr-2" />
+                    Cadastro de Profissionais
+                  </Link>
                 </li>
-                <li className="py-1 hover:bg-indigo-600 rounded-md">
-                  <FaUser className="inline mr-2" />
-                  Consulta de Dados
+                <li>
+                  <Link to="/dashboard/consulta-de-dados" className="flex items-center py-1 hover:bg-indigo-600 rounded-md">
+                    <FaUser className="inline mr-2" />
+                    Consulta de Dados
+                  </Link>
                 </li>
               </ul>
             )}
@@ -154,18 +151,13 @@ const Sidebar = ({ userName }) => {
                   <FaChevronDown className="text-sm" />
                 ))}
             </button>
-            {/* Submenu */}
             {expandedMenus.administrativo && (
-              <ul
-                className={`${
-                  isSidebarOpen
-                    ? "pl-4 mt-2 space-y-1 bg-indigo-700 shadow-lg rounded-md"
-                    : "absolute left-full top-0 mt-2 space-y-1 w-48 bg-indigo-700 shadow-lg rounded-md"
-                }`}
-              >
-                <li className="py-1 hover:bg-indigo-600 rounded-md">
-                  <FaTools className="inline mr-2" />
-                  Declarações
+              <ul className="pl-4 mt-2 space-y-1 bg-indigo-700 shadow-lg rounded-md">
+                <li>
+                  <Link to="/dashboard/declaracoes" className="flex items-center py-1 hover:bg-indigo-600 rounded-md">
+                    <FaTools className="inline mr-2" />
+                    Declarações
+                  </Link>
                 </li>
               </ul>
             )}
@@ -186,18 +178,13 @@ const Sidebar = ({ userName }) => {
                   <FaChevronDown className="text-sm" />
                 ))}
             </button>
-            {/* Submenu */}
             {expandedMenus.configuracoes && (
-              <ul
-                className={`${
-                  isSidebarOpen
-                    ? "pl-4 mt-2 space-y-1 bg-indigo-700 shadow-lg rounded-md"
-                    : "absolute left-full top-0 mt-2 space-y-1 w-48 bg-indigo-700 shadow-lg rounded-md"
-                }`}
-              >
-                <li className="py-1 hover:bg-indigo-600 rounded-md">
-                  <FaUser className="inline mr-2" />
-                  Usuários
+              <ul className="pl-4 mt-2 space-y-1 bg-indigo-700 shadow-lg rounded-md">
+                <li>
+                  <Link to="/dashboard/usuarios" className="flex items-center py-1 hover:bg-indigo-600 rounded-md">
+                    <FaUser className="inline mr-2" />
+                    Usuários
+                  </Link>
                 </li>
               </ul>
             )}
