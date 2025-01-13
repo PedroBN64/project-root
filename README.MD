@@ -1,23 +1,32 @@
-project-root/
-│
-├── backend/               # Aqui fica o código do servidor (Node.js)
-│   ├── config/             # Configurações (por exemplo, banco de dados, autenticação, etc.)
-│   │   └── database.js     # Arquivo de configuração do banco de dados (sequelize)
-│   ├── controllers/        # Lógica dos controladores (módulos de API, etc.)
-│   ├── models/             # Definições dos modelos do Sequelize
-│   ├── routes/             # Arquivos que definem as rotas da API
-│   ├── server.js           # Arquivo principal que inicializa o servidor
-│   ├── migrations/         # Arquivos de migração do banco de dados (Sequelize)
-│   └── seeders/            # Arquivos de semeadura para popular o banco
-│
-├── frontend/               # Aqui fica o código do cliente (React.js)
-│   ├── public/             # Arquivos públicos (ícones, imagens)
-│   ├── src/                # Código-fonte do React
-│   │   ├── components/     # Componentes reutilizáveis
-│   │   ├── pages/          # Páginas do site
-│   │   ├── App.js          # Arquivo principal do React
-│   │   └── index.js        # Arquivo que renderiza o App
-│   └── package.json        # Dependências do frontend
-│
-├── .gitignore              # Arquivo para ignorar arquivos que não devem ser versionados
-└── package.json            # Dependências do backend (Node.js)
+# 🛠️ Guia Rápido: Usando o Git
+<br><br>
+## 🗂️ Puxar Arquivos do Git:
+
+### 📥 Clone o repositório (apenas na primeira vez):
+
+```  git clone https://github.com/PedroBN64/project-root.git ```
+
+🔄 Atualize o repositório local:
+
+``` git pull origin main ``` 
+
+<br>
+<br>
+<br>
+
+
+
+## 💾 Salvar Alterações no Git:
+### ➕ Adicione as alterações:
+
+``` git add . ```
+### 📝 Faça o commit das alterações:
+
+``` git commit -m "Descrição das alterações" ``` 
+### 📤 Envie para o repositório remoto:
+
+``` git push origin main ```
+
+<br><br>
+
+### *Assim, você consegue sincronizar e salvar suas alterações no GitHub de forma rápida e fácil! 😊🚀*
